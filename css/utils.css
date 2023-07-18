@@ -1,0 +1,21 @@
+#menu .img-menu, #dashboard h2, #faqs h2, #management h2, #profile h2, #password h2, #tickets h2, #tools, #profile-photo h2, #password-photo h2 {
+    display: none;
+}
+
+.logout a, #ticket-info a, #messageBoard a, #tickets a {
+    text-decoration: none;
+    color: black;
+}
+
+.logout button, .management button, .faq-buttons button, .add-faq button, .new-ticket button, #profile form button, 
+#profile-photo form button, #password form button, .properties button, .edit-ticket button, .messageBoard-form button,
+.delete-message, .filters button, #show-button, #author-delete-button {
+    background-color: var(--dark-blue);
+    border: none;
+    color: white;
+}
+
+.management[open] button:hover, .faq-buttons button:hover, .add-faq button:hover, .faq[open] .question, 
+.faq[open] .question textarea, .management[open] .action, #new-ticket button:hover {
+    background-color: var(--light-blue);
+}

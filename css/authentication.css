@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+#login, #register {
+    background: linear-gradient(0deg, var(--dark-blue) 52%, rgba(28,159,186,1) 100%);
+    padding: 2.3rem;
+    box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.2);
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Roboto, sans-serif;
+    color: white;
+}
+
+#login{
+    margin-top: 2.5rem;
+}
+
+#login h2, #register h2 {
+    font-size: xx-large;
+    text-align: center;
+}
+
+#login form, #register form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login label, #register label {
+    margin-left: 2rem;
+    margin-top: 0.4rem;
+}
+
+#login input, #register input {
+    align-self: center;
+    padding: 0.3rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.6rem;
+    border-radius: 0.3rem;
+    border: 1px solid #ccc;
+    width: 87%;
+}
+
+#login button, #register button {
+    align-self: center;
+    padding: 0.4rem;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 36%;
+    margin-top: 2rem;
+    margin-bottom: 0.6rem;
+}
+
+#login p, #register p {
+    text-align: center;
+}
+
+#login a, #register a {
+    color: lightskyblue;
+    text-decoration: none;
+}
+
+#authentication-header{
+    font-family: "Roboto", serif;
+    color: darkblue;
+    text-align: center;
+    padding: 5px;
+    margin: 0 auto;
+    text-shadow: #008CBA;
+}
+
+#register a:hover, #login a:hover {
+    text-decoration: underline;
+}
+  
+@media only screen and (max-width: 1120px) {
+    #login label, #register label {
+        margin-left: 0.5rem;
+        margin-top: 0.4rem;
+    }
+
+    #login, #register {
+        width: 60%;
+        margin-top: 0.5rem;
+    }
+
+    #login{
+        margin-top:3rem;
+    }
+}

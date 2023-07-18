@@ -1,0 +1,73 @@
+#new-ticket {
+    background-color: var(--light-gray);
+    margin-top: 3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    min-height: 33rem;
+}
+
+.new-ticket input, .new-ticket textarea, .new-ticket select {
+    display: block;
+    margin-top: 0.3rem;
+    margin-left: 3rem;
+    padding: 0.5rem;
+}
+
+.new-ticket label, .new-ticket button {
+    display: block;
+    margin-top: 1.5rem;
+    margin-left: 3rem;
+}
+
+.new-ticket select{
+    width: 20rem;
+}
+
+.new-ticket input, .new-ticket textarea{
+    width: 18.8rem;
+}
+
+#file-upload{
+    padding:0rem;
+    margin-top: 1.5rem;
+}
+
+#new-ticket h2 {
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+.new-ticket button {
+    padding: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 750px){
+    #new-ticket {
+        background-color: var(--light-gray);
+        margin-top: 3rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        min-height: 33rem;
+    }
+
+    .new-ticket select{
+        width: 14rem;
+    }
+
+    .new-ticket input, .new-ticket textarea{
+        width: 12.8rem;
+    }
+
+    .new-ticket input, .new-ticket textarea, .new-ticket select {
+        margin-left: 1.5rem;
+    }
+    
+    .new-ticket label, .new-ticket button {
+        margin-left: 1.5rem;
+    }
+
+    #new-ticket h2 {
+        font-size: 1.3rem;
+    }
+}

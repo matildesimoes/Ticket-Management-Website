@@ -1,0 +1,141 @@
+:root {
+    --light-blue: rgb(144, 204, 239);
+}
+
+#faqs, #management {
+    margin-left: 3rem; 
+    margin-top: 2rem;
+    margin-right: 3rem;
+}
+
+.add-faq{
+    margin:0;
+}
+
+.faq, .management {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc; 
+    border-radius: 0.3rem;
+    max-width: 70rem;
+}
+
+.question, .action {
+    padding: 0.8rem;
+    font-weight: bold;
+}
+
+.faq > p {
+    padding-left: 0.8rem;
+}
+
+.management form {
+    margin: 1rem;
+}
+
+.management select {
+    padding: 0.2rem;
+}
+
+.management button {
+    padding: 0.3rem;
+    display: block;
+}
+
+#upgrade-role, .field {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.question textarea {
+    width: 30rem;
+    height:1.1rem;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    resize: none;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.add-faq summary{
+    color: var(--light-blue);
+}
+
+.faq[open] summary{
+    color: var(--dark-blue);
+}
+
+.faq-arrow {
+    list-style-type: none;
+}
+
+.faq-buttons, .add-faq button {
+    display: block;
+}
+
+.faq-buttons, .add-faq button {
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+} 
+
+.answer, .add-faq label {
+    margin-left: 0.5rem;
+}
+
+.answer {
+    margin-top: 0.5rem;
+}
+
+.faq #add-question + input {
+    margin-top: 0.5rem;
+}
+
+.faq-questions-agent .answer, .add-faq .answer {
+    width: 30rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.add-faq label:nth-last-of-type(1) {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 750px) {
+
+    #management, #faqs{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    #management form {
+        margin-right: 0rem;
+    }
+
+    #department{
+        margin-top: 0.3rem;
+    }
+
+    .faq .question input{
+        width: 5rem;
+    }
+
+    #entity{
+        margin-left: 0.5rem;
+    }
+
+    .question textarea {
+        width: 13.5rem;
+        min-height:2.3rem;
+        overflow: visible;
+    }
+
+    .faq {
+        max-width: 30rem;
+    }
+
+    .faq-questions-agent .answer, .add-faq .answer {
+        max-width: 15rem;
+    }
+}

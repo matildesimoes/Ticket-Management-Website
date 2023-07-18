@@ -1,0 +1,255 @@
+#tickets-page {
+    display: grid;
+    grid-template-columns: [tickets-start] auto [tickets-mid] 17% [tickets-end];
+    grid-template-rows: [tickets-start] auto [tickets-mid] 3rem [tickets-end];
+    height: 100%;
+}
+
+#tickets {
+    grid-column: tickets-start/tickets-mid;
+    grid-row: tickets-start/tickets-mid;
+}
+
+.ticket a {
+    display: grid;
+    grid-template-columns: [tickets-start] 0.6fr [tickets-mid1] 1fr [tickets-mid2] 0.4fr [tickets-mid3] 0.5fr [tickets-mid4] 0.4fr [tickets-end];
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 4rem;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.author {
+    grid-column: tickets-start/tickets-mid1;
+    margin-left: 1.5rem;
+    display: inline-flex;
+}
+
+.ticket h4 {
+    grid-column: tickets-mid1/tickets-mid2;
+}
+
+.status {
+    grid-column: tickets-mid2/tickets-mid3;
+}
+
+.date-opened {
+    grid-column: tickets-mid3/tickets-mid4;
+}
+
+.priority {
+    grid-column: tickets-mid4/tickets-end;
+}
+
+#controller{
+    display:none;
+}
+
+.author > img {
+    width: 30px;
+    height: 30px;
+    border-radius: 45%;
+    margin-top: 0.4rem;
+    margin-right: 0.3rem;
+}
+
+.author h3, .ticket h4 {
+    font-weight: 100;
+}
+
+.author h3 {
+    font-size: 1rem;
+}
+
+.ticket:hover {
+    background-color: var(--light-gray);
+}
+
+.date-opened{
+    text-align: center;
+}
+
+.priority, .status{
+    border-radius: 50%;
+    padding: 0.3rem;
+    border: 2px solid;
+    text-align: center;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.critical {
+    color: red;
+    border-color: red;
+}
+
+.high {
+    color: orange;
+    border-color: orange;
+}
+
+.medium {
+    color: yellow;
+    border-color: yellow;
+}
+
+.low {
+    color: green;
+    border-color: green;
+}
+
+.none {
+    color: black;
+    border-color: black;
+}
+
+.open{
+    color: purple;
+    border-color: purple;
+}
+
+.closed{
+    color: blue;
+    border-color: blue;
+}
+
+.assigned{
+    color: plum;
+    border-color: plum;
+}
+
+#paging {
+    grid-column: tickets-start/tickets-mid;
+    grid-row: tickets-mid/tickets-end;
+    background-color: var(--light-gray);
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+#paging button {
+    border: none;
+    background-color: var(--light-gray);
+    margin-right: 1rem;
+}
+
+.filters {
+    grid-column: tickets-mid/tickets-end;
+    grid-row: tickets-start/tickets-end;
+    background-color: var(--light-gray);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.filters label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.filters select {
+    width: 7rem;
+}
+
+.filters button {
+    margin-top: auto;
+    width: 5rem;
+    height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 1120px){
+
+    #tickets-page {
+        display: grid;
+        grid-template-columns: [tickets-start] auto [tickets-end];
+        grid-template-rows: [tickets-start] 3rem [tickets-mid1] auto [tickets-mid2] 3rem [tickets-end];
+        height: 100%;
+        width: 100%;
+    }
+
+    #tickets {
+        grid-column: tickets-start/tickets-end;
+        grid-row: tickets-mid1/tickets-mid2;
+    }
+
+    .ticket a {
+        display: grid;
+        grid-template-columns: [tickets-start] 0.6fr [tickets-mid1] 1fr [tickets-end];
+    }
+
+    .author {
+        grid-column: tickets-start/tickets-mid1;
+        margin-left: 1rem;
+        display: inline-flex;
+    }
+
+    .ticket img{
+        margin-top: 0.8rem;
+    }
+
+    .ticket h4 {
+        grid-column: tickets-mid1/tickets-mid2;
+    }
+
+    #paging {
+        grid-column: tickets-start/tickets-end;
+        grid-row: tickets-mid2/tickets-end;
+    }
+
+    .ticket p {
+        display: none;
+    }
+
+    #controller{
+        display: flex;
+        margin-left:auto;
+        grid-column: tickets-start/tickets-end;
+        grid-row: tickets-start/tickets-mid1;
+        align-self: center;
+        margin-right: 1rem;
+        width: 2.5rem;
+        position: relative;
+        right: 0;
+        z-index: 2; 
+    }
+
+    .filters {
+        position: absolute;
+        right: 0;
+        width: 10rem;
+        display: none; 
+        height: 100%;
+    }
+   
+    .filters label, .filters select, .filters input {
+        margin-left: 1.7rem;
+    }
+
+    .filters button{
+        margin-left: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .filters h3{
+        margin-left:3rem;
+    }
+
+    .show {
+        display: block;
+        right:0;
+    }
+
+    .move{
+        padding-right: 10rem;
+    }
+    
+    #tickets:first-child {
+        margin-top: 0rem;
+    }
+}
+    

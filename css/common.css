@@ -1,0 +1,141 @@
+:root {
+  --dark-blue: #22216d;
+  --blue: #76abe0;
+  --light-gray: #edf1f4;
+}
+
+button, summary {
+  cursor: pointer;
+}
+
+body:not(#authentication) {
+  display: grid;
+  grid-template-columns: [start] 13% [mid] auto [end];
+  grid-template-rows: [start] 5.5rem [mid] auto [end];
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#main-header {
+  grid-column: start/end;
+  grid-row: start/mid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--light-gray);
+}
+
+#menu {
+  grid-column: start/mid;
+  grid-row: mid/end;
+}
+
+#main-header h1 {
+  margin-left: 2rem;
+  font-size: 1.3rem;
+}
+
+.logout, #main-header h1 {
+  align-items: center;
+}
+
+.logout a, .logout button {
+  display: block;
+}
+
+.logout a {
+  margin-right: 1rem;
+  text-align: center;
+}
+
+.logout button {
+  padding: 0.3rem;
+  margin-left: 3rem;
+}
+
+#menu {
+  background-color: var(--dark-blue);
+  height: 100%;
+  min-height: calc(100vh - 5.5em);
+}
+
+#menu a {
+  display: block;
+  padding-top: 0.8rem;  
+  padding-bottom: 0.8rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding-left: 2rem;
+}
+
+#menu ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#menu li:hover {
+  background-color: var(--blue);
+}
+
+#messages {
+  position: fixed;
+  transform: translate(-50%, 0);
+  left: 50%;
+  top: 1rem;
+}
+
+.success {
+  background-color: #AFE1AF;
+  color: #097969;
+  padding: 1rem;
+}
+
+.error {
+  background-color: #ff7f7f;
+  color: #7f0000;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 1120px) {
+
+  body:not(#authentication) {
+    display: grid;
+    grid-template-columns: [start] 13% [mid] auto [end];
+    grid-template-rows: [start] 4rem [mid] auto [end];
+  }
+
+  #menu {
+    min-height: calc(100vh - 4em);
+  }
+
+  #menu .img-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+  }
+
+  #menu .img-menu img{
+    width: 40px;
+  }
+
+  #menu .text-menu {
+    display: none;
+  }
+
+  #menu a{
+    padding-left: 0rem;
+  }
+
+  #messages {
+    top: 4.5rem;
+    left: 40%;
+  }
+
+  .success, .error {
+    padding: 0.2rem;
+  }
+}

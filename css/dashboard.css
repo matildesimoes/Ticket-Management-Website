@@ -1,0 +1,58 @@
+#dashboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.card {
+    border-radius: 10%;
+    transition: transform 0.8s;
+    position: relative;
+    background-color: var(--light-gray);
+    text-align: center;     
+    width: 12rem;
+    height: 8rem;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.card h3 {
+    backface-visibility: hidden;
+    opacity: 1; 
+}
+
+.card p {
+    visibility: hidden;
+    opacity: 0;
+    transform: rotateY(180deg);
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+}
+
+.card:hover h3 {
+    opacity: 0;
+}
+
+.card:hover p {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1120px){
+    #dashboard {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .card{
+        margin-top: 2rem;
+        width: 12rem;
+        height:8rem;
+    }
+}

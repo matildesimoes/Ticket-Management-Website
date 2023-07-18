@@ -1,0 +1,108 @@
+.profile-page{
+    display:grid;
+    grid-template-columns: [profile-start] auto [profile-mid] 50% [profile-end];
+}
+
+#profile, #password{
+    grid-column: profile-start/profile-mid;
+}
+
+#profile-photo, #password-photo{
+    grid-column: profile-mid/profile-end;
+}
+
+#profile-photo img, #password-photo img{
+    width: 225px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    margin-left: 1rem;
+}
+
+#edit-profile, #change-password {
+    text-decoration: none;
+}
+
+#profile #edit-profile, #password #change-password {
+    background-color: var(--dark-blue);
+    padding: 1rem;
+    color: white;
+}
+
+#profile #change-password, #password #edit-profile {
+    background-color: var(--light-gray);
+    padding: 1rem;
+    color: black;
+}
+
+#profile, #profile-photo, #password, #password-photo {
+    margin-left: 3rem;
+    margin-top:3rem;
+}
+
+#profile form label input, #password form label input {
+    vertical-align: text-top;
+}
+
+#profile form input, #password form input {
+    max-width: 30rem;
+    margin-bottom: 1rem;
+}
+
+#profile form, #password form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-right: 2rem;
+}
+
+#profile-photo form{
+    display: flex;
+    flex-direction: column;
+}
+
+#profile label, #password label {
+    margin-bottom: 0.3rem;
+}
+
+#profile form button, #profile-photo form button, #password form button {
+    padding: 0.3rem;
+    margin-top: 1rem;
+    width: 6rem;
+}
+
+@media only screen and (max-width: 1120px){
+    
+    #profile #change-password, #password #edit-profile {
+        padding: 0.3rem;
+    }
+
+    #profile #edit-profile, #password #change-password {
+        padding: 0.3rem;
+    }
+
+    .profile-page{
+        display:grid;
+        grid-template-columns: [profile-start] auto [profile-end];
+        grid-template-rows: [profile-start] 24rem [profile-mid] auto [profile-end];
+    }
+
+    #profile, #password{
+        grid-column: profile-start/profile-end;
+        grid-row: profile-start/profile-mid;
+    }
+    
+    #profile-photo, #password-photo{
+        grid-column: profile-start/profile-end;
+        grid-row: profile-mid/profile-end;
+    }
+
+    #profile-photo img, #password-photo img{
+        width: 200px;
+        margin-left: 0rem;
+    }
+       
+    #profile, #profile-photo, #password, #password-photo {
+        margin-left: 1.5rem;
+        margin-top:3rem;
+    }
+}
